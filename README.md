@@ -1,6 +1,7 @@
 # Getting Started with Create React App
 
 Hello, World!!!!! This is my new frontend woooo!!!!!
+This is my react frontend I hope this merges now 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
