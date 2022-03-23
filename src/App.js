@@ -3,8 +3,8 @@ import {BrowserRouter as Router, Route, Switch} from "react-router-dom"
 import Home from './components/Home';
 import Header from './components/Header';
 import Navbar from './components/Navbar.js';
-import MusicCard from './components/MusicCard';
-import MusicForm from './components/MusicForm';
+import MusicCard from './components/Music/MusicCard';
+import MusicForm from './components/Music/MusicForm';
 import MusicContainer from './containers/MusicContainer';
 import UserProfile from './components/UserProfile';
 import About from './components/About';

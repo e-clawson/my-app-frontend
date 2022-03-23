@@ -1,15 +1,15 @@
 import { useState, useEffect } from "react"
-import MusicList from "../components/MusicList"
+import MusicList from "../components/Music/MusicList"
 
 const MusicContainer = () => {
-    const [music, setMusic] = useState([]);
+    const [musics, setMusics] = useState([]);
     const [loading, setLoading] = useState(true);
     useEffect(() => {
         const fetchData = async () => {
             try{
-                const resp = await fetch("http://127.0.0.1:9393/")
+                const resp = await fetch("http://127.0.0.1:9393/musics")
                 const data = await resp.json()
-                setMusic(data)
+                setMusics(data)
                 setLoading(false)
             } catch (error) {
                 alert(error)
@@ -23,7 +23,7 @@ const MusicContainer = () => {
   return (
     <>
         <div>Music List</div>
-        <MusicList music={music} />
+        <MusicList musics={musics} />
     </>
 
   )
