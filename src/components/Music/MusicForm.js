@@ -21,8 +21,8 @@ const MusicForm = () => {
 
   const handleSubmit = e => {
       e.preventDefault()
-      if ([music.title, music.instrumentation, music.composerFirstName, music.composerLastName, music.yearComposed, music.length])
-        alert("Please provide all the requested information")
+      if ([music.title, music.instrumentation, music.composerFirstName, music.composerLastName, music.yearComposed, music.length].some(val => val.trim() === "")) {
+        alert("Please provide all the requested information")}
 
   const newMusic = {
       title: music.title,
@@ -40,12 +40,12 @@ const MusicForm = () => {
     },
     body: JSON.stringify(newMusic) 
   })
-   history.push("/musics")
+  .then(() => history.push("/musics"))
 }
 
   return (
     <>
-    <div>Add New Music</div>
+    <h3>Add New Music</h3>
     <form onSubmit={handleSubmit}>
         <label htmlFor="title"> Title</label>
         <input onChange={handleChange} type="text" title="title" value={music.title} required/> <br />
@@ -59,9 +59,9 @@ const MusicForm = () => {
         <input onChange={handleChange} type="number" value={music.yearComposed} required/> <br />
         <label htmlFor="length"> Length (please input like so: example "5 minutes")</label>
         <input onChange={handleChange} type="text" length="length" value={music.length} required/> <br />
+        <input type="submit" value="Add Music" />
     </form>
     </>
-  
   )
 }
 
