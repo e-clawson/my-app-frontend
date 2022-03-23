@@ -33,7 +33,7 @@ const MusicForm = () => {
       length: music.length
   }
 
-  fetch("", {
+  fetch("http://127.0.0.1:9393/musics", {
     method: "POST", 
     headers: {
         "Content-Type": "application/json",
@@ -48,17 +48,17 @@ const MusicForm = () => {
     <h3>Add New Music</h3>
     <form onSubmit={handleSubmit}>
         <label htmlFor="title"> Title</label>
-        <input onChange={handleChange} type="text" title="title" value={music.title} required/> <br />
+        <input onChange={handleChange} type="text" name="title" value={music.title} required/> <br />
         <label htmlFor="instrumentation"> Instrumentation</label>
-        <input onChange={handleChange} type="text"  value={music.instrumentation} required/> <br />  
+        <input onChange={handleChange} type="text" name="instrumentation" value={music.instrumentation} required/> <br />  
         <label htmlFor="composerFirstName"> Composer First Name</label>
-        <input onChange={handleChange} type="text"  value={music.composerFirstName} required/> <br />
+        <input onChange={handleChange} type="text"  name="composerFirstName" value={music.composerFirstName} required/> <br />
         <label htmlFor="composerLastName"> Composer Last Name</label>
-        <input onChange={handleChange} type="text"  value={music.composerLastName} required/> <br />
+        <input onChange={handleChange} type="text"  name="composerLastName" value={music.composerLastName} required/> <br />
         <label htmlFor="yearComposed"> Year Composed (input as number - ex: 1962)</label>
-        <input onChange={handleChange} type="number" value={music.yearComposed} required/> <br />
+        <input onChange={handleChange} type="number" name="yearComposed" value={music.yearComposed} required/> <br />
         <label htmlFor="length"> Length (please input like so: example "5 minutes")</label>
-        <input onChange={handleChange} type="text" length="length" value={music.length} required/> <br />
+        <input onChange={handleChange} type="text" name="length" value={music.length} required/> <br />
         <input type="submit" value="Add Music" />
     </form>
     </>
