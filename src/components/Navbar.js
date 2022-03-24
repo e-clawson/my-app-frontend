@@ -50,6 +50,15 @@ const Navbar = () => {
                 style={style}
                 to="/music/new"
            >New Piece</NavLink> 
+             <NavLink
+           activeStyle={{
+               fontWeight:"bolder",
+               color: "blue"
+           }}
+                exact 
+                style={style}
+                to="/login"
+           >Login</NavLink> 
 
     </div>
   )

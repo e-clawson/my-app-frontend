@@ -8,6 +8,7 @@ import MusicForm from './components/Music/MusicForm';
 import MusicContainer from './containers/MusicContainer';
 import UserProfile from './components/UserProfile';
 import About from './components/About';
+import Login from './components/Login';
 
 function App() {
   return (
@@ -34,6 +35,10 @@ function App() {
 
           <Route path="/about">
             <About />
+          </Route>
+
+          <Route path="/login">
+            <Login />
           </Route>
 
           <Route path="/">
