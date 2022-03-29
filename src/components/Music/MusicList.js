@@ -25,4 +25,4 @@ const MusicList = ({musics}) => {
   )
 }
 
-export default MusicList
+export default MusicList;

@@ -6,14 +6,35 @@ import Navbar from './components/Navbar.js';
 import MusicCard from './components/Music/MusicCard';
 import MusicForm from './components/Music/MusicForm';
 import MusicContainer from './containers/MusicContainer';
-import UserProfile from './components/UserProfile';
+import UserProfile from './components/User/UserProfile';
 import About from './components/About';
-import Login from './components/Login';
+import Login from './components/User/Login';
+import Logout from './components/User/Logout';
+import { UserContext } from './context/user';
+import { useEffect, useContext } from 'react';
 
 function App() {
+  const {user, setUser} = useContext(UserContext);
+
+  useEffect(() => {
+    fetch ("http://127.0.0.1:9393/me")
+    .then((resp) => {
+      if (resp.ok) {
+        resp.json().then((user) => {
+          console.log(user)
+          setUser(user)
+        });
+      } else {
+        resp.json().then((error) => console.log(error.error))
+      }
+    })
+    .catch(e => console.log(e))
+  }, [user, setUser]);
+
   return (
     <div className="App">
       <Router>
+        {/* <Notification> */}
         <Navbar />
         <Header storename="Double Bass DataBase" slogan="The Place For Music of the Double Bass!"/>
         <Switch>
@@ -41,11 +62,16 @@ function App() {
             <Login />
           </Route>
 
+          <Route path="/logout">
+            <Logout />
+          </Route>
+
           <Route path="/">
             <Home />
           </Route>
 
         </Switch>
+        {/* </Notification> */}
       </Router>
     </div>
   );

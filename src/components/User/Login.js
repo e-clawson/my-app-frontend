@@ -1,13 +1,13 @@
 import {useState, useContext} from 'react'
 import { useHistory } from 'react-router-dom'
-import { UserContext } from "../context/user.js"
-import { MessageContext } from '../context/message.js'
+import { UserContext } from "../../context/user.js"
+import { MessageContext } from '../../context/message.js'
 
 const Login = () => {
     const {setUser} = useContext(UserContext);
     const {setMessage} = useContext(MessageContext); 
 
-    const [userObj, setUserObj] = useState ({
+    const [userObj, setUserObj] = useState({
         email: "", 
         password: ""
     });
@@ -28,7 +28,7 @@ const Login = () => {
         }
     }
 
-    fetch ("http://127.0.0.1:9393/login", {
+    fetch("http://127.0.0.1:9393/login", {
         method: "POST",
         headers: {
             "Content-Type" : "application/json",
@@ -40,7 +40,7 @@ const Login = () => {
             resp.json()
             .then((data) => {
                 setUser(data.user)
-                setMessage({message: data.message, status:"Success"})
+                setMessage({message: data.message, status: "Success"})
                 history.push("/profile")
             })
         } else {

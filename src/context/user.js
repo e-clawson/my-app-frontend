@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useState } from 'react';
 
 const UserContext = React.createContext();
 
@@ -11,4 +12,4 @@ function UserProvider ({children}) {
     );
 }
 
-export { UserContext, UserProvider};
+export { UserContext, UserProvider };
