@@ -9,7 +9,7 @@ const style = {
     verticalAlign: "center",
 };
 
-const Navbar = () => {
+const Navbar = ({user}) => {
   return (
     <div>
         <NavLink
@@ -71,6 +71,16 @@ const Navbar = () => {
                 style={style}
                 to="/login"
            >Login</NavLink> : null}
+           
+           {!user ? <NavLink
+            activeStyle={{
+               fontWeight:"bolder",
+               color: "blue"
+           }}
+                exact 
+                style={style}
+                to="/signup"
+           >Sign Up</NavLink> : null}
     </div>
   )
 }

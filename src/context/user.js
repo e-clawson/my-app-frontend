@@ -1,9 +1,8 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 const UserContext = React.createContext();
 
-function UserProvider ({children}) {
+function UserProvider ({ children }) {
     const [user, setUser] = useState(null);
     return (
         <UserContext.Provider value={{ user, setUser }}> 

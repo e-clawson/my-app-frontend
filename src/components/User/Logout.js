@@ -1,7 +1,7 @@
 import { useEffect, useContext } from "react";
-import { UserContext } from "src/context/user.js";
 import { MessageContext } from "../../context/message";
 import { useHistory } from "react-router-dom";
+import { UserContext } from "../../context/user";
 
 const Logout = () => {
     const {setUser} = useContext(UserContext);

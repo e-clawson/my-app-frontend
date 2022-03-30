@@ -12,6 +12,8 @@ import Login from './components/User/Login';
 import Logout from './components/User/Logout';
 import { UserContext } from './context/user';
 import { useEffect, useContext } from 'react';
+import SignUp from './components/User/SignUp';
+
 
 function App() {
   const {user, setUser} = useContext(UserContext);
@@ -21,7 +23,6 @@ function App() {
     .then((resp) => {
       if (resp.ok) {
         resp.json().then((user) => {
-          console.log(user)
           setUser(user)
         });
       } else {
@@ -34,8 +35,8 @@ function App() {
   return (
     <div className="App">
       <Router>
-        {/* <Notification> */}
-        <Navbar />
+       {/* <Notification />  */}
+        <Navbar user={user}/>
         <Header storename="Double Bass DataBase" slogan="The Place For Music of the Double Bass!"/>
         <Switch>
           <Route path="/music/new">
@@ -66,12 +67,16 @@ function App() {
             <Logout />
           </Route>
 
+          <Route path="/signup">
+            <SignUp />
+          </Route>
+
           <Route path="/">
             <Home />
           </Route>
 
         </Switch>
-        {/* </Notification> */}
+        {/* <Notification /> */}
       </Router>
     </div>
   );

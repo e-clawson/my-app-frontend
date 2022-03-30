@@ -1,7 +1,7 @@
 import MusicCard from "./MusicCard"
 
-const MusicList = ({musics}) => {
- const renderMusic = musics.map(music => <MusicCard key={music.id} music={music}/> )
+const MusicList = ({musics, addToFavorites}) => {
+ const renderMusic = musics.map(music => <MusicCard key={music.id} music={music} addToFavorites={addToFavorites}/> )
     return (
     <div>
       <h1>Music List</h1>
