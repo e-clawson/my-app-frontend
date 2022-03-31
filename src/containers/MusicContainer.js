@@ -6,7 +6,7 @@ const MusicContainer = () => {
     const [musics, setMusics] = useState([]);
     const [loading, setLoading] = useState(true);
     const [filteredMusic, setFilteredMusic] = useState(musics)
-    const [favoriteView, setFavoriteView] = useState(false)
+    const [MyListView, setMyListView] = useState(false)
     const [favoriteMusic, setFavoriteMusic] = useState(musics)
 
     useEffect(() => {
@@ -37,7 +37,19 @@ const MusicContainer = () => {
         alert(`${music.title["musicTitle"]} was added to favorites!`)
         }
     }
-
+    // const sortMusic = () => {
+    //     const sortedVillagers = [...filteredMusic].sort(function(a, b) {
+    //         var nameA = a.(music.title["title"] || music.title).toUpperCase();
+    //         var nameB = b.title.toUpperCase(); 
+    //         if (nameA < nameB) {
+    //           return -1;
+    //         }
+    //         if (nameA > nameB) {
+    //           return 1;
+    //         }
+    //         return 0;
+    //     })
+    //     setFilteredVillagers(sortedVillagers)
 
 
   return (
@@ -50,4 +62,4 @@ const MusicContainer = () => {
   )
 }
 
-export default MusicContainer
+export default MusicContainer;

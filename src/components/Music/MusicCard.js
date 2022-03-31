@@ -18,15 +18,15 @@ const MusicCard = ({music, addtoFavorites}) => {
   return (
     <>
             <tr>
-             <td><Link to={`/musics/${finalMusic.id}`}>{finalMusic.title}</Link></td>
+             <td>{finalMusic.title}</td>
              <td>{finalMusic.composer_first_name} {finalMusic.composer_last_name}</td>
              <td>{finalMusic.instrumentation}</td>
              <td>{finalMusic.year_composed}</td>
              <td>{finalMusic.length}</td>
-             <td><button onClick={() => addToFavorites(music)}>💖</button></td>
+             <td><button onClick={() => addToList(music)}>💖</button></td>
             </tr>
     </>
  )
 }
 
-  export default MusicCard
+export default MusicCard;

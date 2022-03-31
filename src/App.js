@@ -10,7 +10,7 @@ import UserProfile from './components/User/UserProfile';
 import About from './components/About';
 import Login from './components/User/Login';
 import Logout from './components/User/Logout';
-import { UserContext } from './context/user';
+import { UserContext} from './context/user';
 import { useEffect, useContext } from 'react';
 import SignUp from './components/User/SignUp';
 

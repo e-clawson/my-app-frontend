@@ -9,4 +9,4 @@ const Header = ({storename, slogan}) => {
   )
 }
 
-export default Header
+export default Header;

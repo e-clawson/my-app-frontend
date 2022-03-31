@@ -64,11 +64,11 @@ const Login = () => {
             <label htmlFor="name">Email</label>
             <input onChange={handleChange} type="text" name="email" value={userObj.email}/>
             <label htmlFor="password">Password</label>
-            <input onChange={handleChange} type="password" name="password" value={userObj.password}/>
+            <input onChange={handleChange} type="text" name="password" value={userObj.password}/>
             <input type="submit" value="login" />
         </form>
     </>
   )
 }
 
-export default Login
+export default Login;
