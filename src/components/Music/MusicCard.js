@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
-import { Link, useParams} from "react-router-dom"
+import { useParams } from "react-router-dom"
 
 
-const MusicCard = ({music, addtoFavorites}) => {
+const MusicCard = ({music }) => {
   const {id} = useParams
   const [musObj, setMusObj] = useState ({});
   useEffect(() => {
@@ -23,7 +23,7 @@ const MusicCard = ({music, addtoFavorites}) => {
              <td>{finalMusic.instrumentation}</td>
              <td>{finalMusic.year_composed}</td>
              <td>{finalMusic.length}</td>
-             <td><button onClick={() => addToList(music)}>💖</button></td>
+             <td><button>💖</button></td>
             </tr>
     </>
  )

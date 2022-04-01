@@ -54,8 +54,8 @@ const MusicContainer = () => {
 
   return (
     <>
-        <div>Music List</div>
-        <MusicFilter handleSearch={handleSearch}/>
+        <h2>Music List</h2>
+        {/* <MusicFilter handleSearch={handleSearch}/> */}
         <MusicList musics={musics} addToFavorites={addToFavorites}/>
     </>
 

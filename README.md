@@ -23,10 +23,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 this project was created using React - to learn more about React please visit the React Development Pages: https://reactjs.org/ 
 or [Create React App](https://github.com/facebook/create-react-app).
 
-## Usage
-
-
-
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 

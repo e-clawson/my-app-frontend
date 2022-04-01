@@ -4,7 +4,8 @@ const MusicList = ({musics, addToFavorites}) => {
  const renderMusic = musics.map(music => <MusicCard key={music.id} music={music} addToFavorites={addToFavorites}/> )
     return (
     <div>
-      <h1>Music List</h1>
+      <h2>All Pieces </h2>
+      
         <table>
         <thead>
           <tr>
