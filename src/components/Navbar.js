@@ -61,6 +61,16 @@ const Navbar = ({user}) => {
                 style={style}
                 to="/logout"
            >Logout</NavLink> : null}
+           
+           {user ? <NavLink
+           activeStyle={{
+               fontWeight:"bolder",
+               color: "blue"
+           }}
+                exact 
+                style={style}
+                to="/delete"
+           >Delete User</NavLink> : null}
 
             {!user ? <NavLink
             activeStyle={{

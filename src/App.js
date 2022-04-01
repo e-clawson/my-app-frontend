@@ -13,6 +13,7 @@ import Logout from './components/User/Logout';
 import { UserContext } from './context/user';
 import { useEffect, useContext } from 'react';
 import SignUp from './components/User/SignUp';
+import DeleteUser from './components/User/DeleteUser';
 // import { Notification } from './components/Notification';
 
 
@@ -66,6 +67,10 @@ function App() {
 
           <Route path="/logout">
             <Logout />
+          </Route>
+
+          <Route path="/delete">
+            <DeleteUser user={user}/>
           </Route>
 
           <Route path="/signup">

@@ -1,13 +1,11 @@
-import React from 'react'
-import {useContext} from 'react'
-// import { useHistory } from 'react-router-dom'
+import {useContext, useEffect} from 'react'
+import { useHistory } from 'react-router-dom'
 import { UserContext } from "../../context/user.js"
-import { DeleteUser } from "./DeleteUser"
-// import { MessageContext } from '../../context/message.js'
+import { MessageContext } from '../../context/message.js'
+// import { DeleteUser } from "./DeleteUser"
 
 const UserProfile = () => {
-  const {setUser} = useContext(UserContext);
-
+  
   return (
   <>
     <h2>My Music List</h2>
@@ -28,8 +26,8 @@ const UserProfile = () => {
         </tbody>
 
     </table>
-
-    <button onClick={() => DeleteUser()}> Delete My Profile</button>
+{/* 
+    <button onClick={() => DeleteUser()}> Delete My Profile</button> */}
   </>
   )
 }
